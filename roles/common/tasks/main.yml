@@ -6,6 +6,7 @@
 - name: Update APT cache
   apt:
     update_cache: yes
+  become: true
 
 - name: Install Deadsnakes Python 3.7 (Ubuntu)
   apt:
