@@ -1,7 +1,7 @@
 ---
 # All available playbooks
-- include: common.yml
-- include: security.yml
-- include: raspi.yml
-- include: rtorrent.yml
-- include: apps.yml
+- import_playbook: common.yml
+- import_playbook: security.yml
+- import_playbook: raspi.yml
+- import_playbook: rtorrent.yml
+- import_playbook: apps.yml
