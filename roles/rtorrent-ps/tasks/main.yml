@@ -108,7 +108,7 @@
 - name: Create rtorrent /var symlink
   file: src=/home/rtorrent/rtorrent path=/var/torrent state=link
 
-- include: config.yml
+- import_tasks: config.yml
 
 - name: Install initial rtorrent crontab
   copy: src=crontab dest=/var/spool/cron/crontabs/rtorrent owner=rtorrent group=crontab mode=0600 force=no
