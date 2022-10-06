@@ -62,4 +62,4 @@
   register: pyro_versions
 - debug: var=pyro_versions.stdout_lines
 
-- include: cron.yml
+- import_tasks: cron.yml
