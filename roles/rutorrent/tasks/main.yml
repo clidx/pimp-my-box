@@ -42,7 +42,7 @@
     - profile/settings
     - profile/torrents
 
-- include: install.yml
+- import_tasks: install.yml
 
 - name: Render rutorrent include for rtorrent
   template:
@@ -125,5 +125,5 @@
     force: no
   when: "( av_tool is not defined or av_tool != 'ffmpeg' ) and avconv_bin.stat.exists and not ffmpeg_bin.stat.exists"
 
-- include: fpm.yml
-- include: nginx.yml
+- import_tasks: fpm.yml
+- import_tasks: nginx.yml
